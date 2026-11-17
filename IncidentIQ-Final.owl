@@ -1,0 +1,813 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#affectsService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#affectsService">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#dependsOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#requiredBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#diagnosedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#diagnosedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#directlyDependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#directlyDependsOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#dependsOn"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSeverity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSymptom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#mayBeCausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#mayBeCausedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#requiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#requiredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#resolvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#resolvedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#runsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#runsOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#usesSoftware -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#usesSoftware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasErrorCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasErrorCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasIPAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasIPAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasInstructions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasInstructions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasPort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasPort">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSeverityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSeverityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasTestProcedure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasTestProcedure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthenticationService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthenticationService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CriticalFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CriticalFault">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#hasSeverity"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseDependentService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseDependentService">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#dependsOn"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#runsOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Server"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#OperatingSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#PerformanceSymptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#PerformanceSymptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RootCause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RootCause">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Server -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Server">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ServiceFault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ServiceFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Fault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#StorageDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#StorageDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Symptom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServerSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServerSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Apache01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Apache01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServerSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AttendanceSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AttendanceSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebService"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01"/>
+        <usesSoftware rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Apache01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthenticationService"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#runsOn"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseServer01"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseConnection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseConnection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+        <hasTestProcedure>Verify connectivity to database port</hasTestProcedure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+        <hasTestProcedure>Check whether the database process is running</hasTestProcedure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckNetwork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+        <hasTestProcedure>Verify network connectivity to database server</hasTestProcedure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckWebService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckWebService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DiagnosticTest"/>
+        <hasTestProcedure>Check whether the web server process is running</hasTestProcedure>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ConnectionTimeout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ConnectionTimeout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error"/>
+        <hasDescription>Connection timed out</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <hasSeverityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSeverityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseService"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Network01"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseServer01"/>
+        <usesSoftware rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Linux01"/>
+        <usesSoftware rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#MySQL01"/>
+        <hasPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3306</hasPort>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseConnectionFailure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseConnectionFailure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ServiceFault"/>
+        <affectsService rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01"/>
+        <diagnosedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseConnection"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ConnectionTimeout"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#HTTP503"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#LoginFailure"/>
+        <mayBeCausedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseProcessStopped"/>
+        <mayBeCausedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkFailure"/>
+        <resolvedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreDatabaseConnection"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseConnectionFailure"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#resolvedBy"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartDatabaseService"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseProcessStopped -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseProcessStopped">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RootCause"/>
+        <affectsService rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Database01"/>
+        <diagnosedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckDatabaseProcess"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ConnectionTimeout"/>
+        <resolvedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartDatabaseService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseServer01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseServer01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Server"/>
+        <hasIPAddress>192.168.1.20</hasIPAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ExaminationSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ExaminationSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebService"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01"/>
+        <usesSoftware rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Apache01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#HTTP503 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#HTTP503">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error"/>
+        <hasDescription>Service temporarily unavailable</hasDescription>
+        <hasErrorCode>503</hasErrorCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#High -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#High">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <hasSeverityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSeverityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Linux01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Linux01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#OperatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#LoginFailure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#LoginFailure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Error"/>
+        <hasDescription>User cannot log in</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Low -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Low">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <hasSeverityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSeverityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Medium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Severity"/>
+        <hasSeverityLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSeverityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#MySQL01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#MySQL01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#DatabaseSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Network01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Network01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkService"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkFailure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#NetworkFailure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RootCause"/>
+        <affectsService rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Network01"/>
+        <diagnosedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckNetwork"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Critical"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ConnectionTimeout"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#SlowResponse"/>
+        <resolvedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreNetwork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartDatabaseService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartDatabaseService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <hasInstructions>Inspect database logs and restart the database service if authorized</hasInstructions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartWebService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartWebService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <hasInstructions>Inspect web server logs and restart the service if authorized</hasInstructions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreDatabaseConnection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreDatabaseConnection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <hasInstructions>Verify database host, port and connection configuration</hasInstructions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestoreNetwork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Solution"/>
+        <hasInstructions>Inspect network connectivity and restore the failed connection</hasInstructions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Router"/>
+        <hasIPAddress>192.168.1.1</hasIPAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#SlowResponse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#SlowResponse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#PerformanceSymptom"/>
+        <hasDescription>System is responding slowly</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#StudentPortal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#StudentPortal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebService"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#AuthService01"/>
+        <directlyDependsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Network01"/>
+        <runsOn rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01"/>
+        <usesSoftware rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Apache01"/>
+        <hasPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">443</hasPort>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServer01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#Server"/>
+        <hasIPAddress>192.168.1.10</hasIPAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServiceFailure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#WebServiceFailure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#ServiceFault"/>
+        <affectsService rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#StudentPortal"/>
+        <diagnosedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#CheckWebService"/>
+        <hasSeverity rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#High"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#HTTP503"/>
+        <resolvedBy rdf:resource="http://www.semanticweb.org/macbookpro/ontologies/2026/10/untitled-ontology-5#RestartWebService"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,20 @@
+{
+  "database": {
+    "label": "Database outage",
+    "report": "The student portal is returning HTTP 503.",
+    "services": {"StudentPortal": "offline", "AttendanceSystem": "offline", "ExaminationSystem": "offline", "AuthService01": "offline", "Database01": "offline", "Network01": "online"},
+    "tests": {"CheckDatabaseConnection": "fail", "CheckDatabaseProcess": "fail", "CheckNetwork": "pass", "CheckWebService": "pass"}
+  },
+  "network": {
+    "label": "Network failure",
+    "report": "The student portal is timing out and showing HTTP 503.",
+    "services": {"StudentPortal": "offline", "AttendanceSystem": "offline", "ExaminationSystem": "offline", "AuthService01": "offline", "Database01": "degraded", "Network01": "offline"},
+    "tests": {"CheckDatabaseConnection": "fail", "CheckDatabaseProcess": "pass", "CheckNetwork": "fail", "CheckWebService": "pass"}
+  },
+  "web": {
+    "label": "Web service failure",
+    "report": "The student portal shows service unavailable (503).",
+    "services": {"StudentPortal": "offline", "AttendanceSystem": "online", "ExaminationSystem": "online", "AuthService01": "online", "Database01": "online", "Network01": "online"},
+    "tests": {"CheckDatabaseConnection": "pass", "CheckDatabaseProcess": "pass", "CheckNetwork": "pass", "CheckWebService": "fail"}
+  }
+}

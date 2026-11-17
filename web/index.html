@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0f19">
+  <title>IncidentIQ — Incident diagnosis</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="#top" class="brand">
+      <span class="brand-mark" data-icon="pulse"></span>
+      <span>Incident<span>IQ</span></span>
+    </a>
+    <nav aria-label="Workspace">
+      <a href="#investigation" class="active"><span data-icon="search"></span>Investigation</a>
+      <a href="#infrastructure"><span data-icon="server"></span>Infrastructure</a>
+      <a href="#evidence"><span data-icon="layers"></span>Evidence</a>
+    </nav>
+    <div class="sidebar-footer">
+      <span class="connection-dot"></span><span id="connection">Connecting…</span>
+    </div>
+  </aside>
+
+  <main id="top" class="workspace">
+    <header class="topbar">
+      <span class="breadcrumb">Workspace <span>/</span> Incident diagnosis</span>
+      <span id="source-badge" class="chip"><span class="connection-dot"></span>Loading</span>
+    </header>
+    <div class="content">
+      <div class="page-heading">
+        <h1>Incident diagnosis</h1>
+        <p>Trace infrastructure faults through dependencies, diagnostic tests, and project logs.</p>
+      </div>
+      <div class="metrics" id="metrics" aria-label="Infrastructure summary"></div>
+
+      <div class="dashboard">
+        <div class="main-column">
+          <section class="panel" id="investigation" aria-labelledby="investigation-heading">
+            <header class="panel-header">
+              <span class="section-icon" data-icon="search"></span>
+              <div><h2 id="investigation-heading">Investigation</h2><p>Describe the incident and choose an evidence source.</p></div>
+            </header>
+            <form id="investigation-form">
+              <label for="scenario">Evidence source</label>
+              <select id="scenario" name="scenario" disabled></select>
+              <div id="uploads" class="uploads" hidden>
+                <div><label for="project">Project ZIP <small id="project-limit">optional</small></label>
+                  <input type="file" id="project" name="project" accept=".zip">
+                </div>
+                <div><label for="status">Status JSON <small>optional · up to 64 KB</small></label>
+                  <input type="file" id="status" name="status" accept=".json,application/json">
+                </div>
+                <p>Include diagnostic <code>.log</code> files and dependency manifests in the ZIP.
+                  <a href="/api/status-template">Download the status template</a>.
+                </p>
+              </div>
+              <label for="report">Incident report</label>
+              <textarea id="report" name="report" maxlength="2000" rows="3" required placeholder="Which service is affected, and what error did you see?"></textarea>
+              <div class="form-footer">
+                <div class="model-choice">
+                  <label class="checkbox"><input type="checkbox" name="use_nvidia" id="nvidia" disabled> Use NVIDIA for intake</label>
+                  <small id="model-hint">Checking NVIDIA configuration…</small>
+                </div>
+                <button id="run" type="submit" disabled><span data-icon="play"></span>Run diagnosis</button>
+              </div>
+              <p id="error" class="error" role="alert" hidden></p>
+            </form>
+          </section>
+
+          <section class="panel" id="result" aria-labelledby="result-heading" aria-busy="true">
+            <header class="panel-header">
+              <span class="section-icon" data-icon="pulse"></span>
+              <div><h2 id="result-heading">Diagnostic report</h2><p id="result-source"></p></div>
+            </header>
+            <div id="report-content" class="panel-content" aria-live="polite">Loading the demo investigation…</div>
+          </section>
+        </div>
+
+        <div class="side-column">
+          <section class="panel" id="infrastructure" aria-labelledby="infrastructure-heading">
+            <header class="panel-header">
+              <span class="section-icon" data-icon="server"></span>
+              <div><h2 id="infrastructure-heading">Infrastructure</h2><p id="inventory-source"></p></div>
+            </header>
+            <ul id="service-list" class="service-list"></ul>
+          </section>
+
+          <section class="panel" id="evidence" aria-labelledby="evidence-heading">
+            <header class="panel-header">
+              <span class="section-icon" data-icon="layers"></span>
+              <div><h2 id="evidence-heading">Evidence</h2><p id="evidence-count">Waiting for a diagnosis</p></div>
+            </header>
+            <div id="trace" class="trace"></div>
+            <ol id="evidence-list" class="evidence-list"></ol>
+          </section>
+        </div>
+      </div>
+      <footer class="workspace-footer"><span data-icon="layers"></span><span id="ontology-footer"></span></footer>
+    </div>
+  </main>
+</body>
+</html>
